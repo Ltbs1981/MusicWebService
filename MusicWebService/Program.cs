@@ -1,4 +1,5 @@
-﻿using MusicWebService.Modelos;
+﻿using MusicWebService.Filtros;
+using MusicWebService.Modelos;
 using System.Text.Json;
 
 using (HttpClient client = new HttpClient())
@@ -6,9 +7,10 @@ using (HttpClient client = new HttpClient())
     try
     {
         string resposta = await client.GetStringAsync("https://guilhermeonrails.github.io/api-csharp-songs/songs.json");
-        Console.WriteLine(resposta);
         var musicas = JsonSerializer.Deserialize<List<Musica>>(resposta)!;
-        musicas[10].ExibirFichaTecnica();
+        LinqFilter.FiltrarTodosOsGenerosMusicais(musicas);
+
+        //musicas[1].ExibirDetalhesDaMusica();
 
     }
     catch (Exception ex)
