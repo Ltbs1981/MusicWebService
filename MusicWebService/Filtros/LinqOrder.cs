@@ -1,9 +1,4 @@
 ﻿using MusicWebService.Modelos;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MusicWebService.Filtros
 {
@@ -15,7 +10,7 @@ namespace MusicWebService.Filtros
             Console.WriteLine("Lista de artistas ordenados");
             foreach (var artista in artistasOrdenados)
             {
-                Console.WriteLine($"- {artista}");
+                Console.WriteLine($" {artista}");
             }
         }
     }
