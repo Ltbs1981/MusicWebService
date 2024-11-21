@@ -1,4 +1,5 @@
 ﻿using MusicWebService.Modelos;
+using MusicWebService.Modelos;
 
 namespace MusicWebService.Filtros;
 
@@ -10,7 +11,7 @@ internal class LinqOrder
         Console.WriteLine("Lista de artistas ordenados");
         foreach (var artista in artistasOrdenados)
         {
-            Console.WriteLine($" {artista}");
+            Console.WriteLine($"- {artista}");
         }
     }
 }
